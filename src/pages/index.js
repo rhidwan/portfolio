@@ -1,6 +1,6 @@
-import AnimatedText from "@/Components/AnimatedText";
-import { LinkArrow } from "@/Components/Icons";
-import Layout from "@/Components/Layout";
+import AnimatedText from "../Components/AnimatedText";
+import { LinkArrow } from "../Components/Icons";
+import Layout from "../Components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import DashNight from "../../public/images/svgs/dash_night.svg";
 import {CustomLink} from "../Components/Navbar"
 import { RiContactsBookFill } from "react-icons/ri";
 import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import Transitions from "@/Components/Transitions";
+import Transitions from "../Components/Transitions";
 import { ImUserTie } from "react-icons/im";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
