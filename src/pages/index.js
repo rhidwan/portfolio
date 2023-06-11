@@ -7,11 +7,8 @@ import Link from "next/link";
 import Dashday from "../../public/images/svgs/dash_day.svg";
 import DashNight from "../../public/images/svgs/dash_night.svg";
 
-import {CustomLink} from "../Components/Navbar"
-import { RiContactsBookFill } from "react-icons/ri";
 import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import Transitions from "../Components/Transitions";
-import { ImUserTie } from "react-icons/im";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 
@@ -64,8 +61,8 @@ export default function Home() {
               <div className="flex flex-wrap  items-center self-start mt-2 lg:self-center">
                
                 <Link
-                  href={"http://example.com"}
-                  target="_self"
+                  href='/Resume_of_Iqbal_Mohammad_Rhidwan.pdf'
+                  target="_blank"
                   className="flex items-center mt-1.5 bg-dark text-light p-2 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
                   Resume  <FaExternalLinkAlt className="ml-2" />

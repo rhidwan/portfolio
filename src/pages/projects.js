@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Transitions from "../Components/Transitions";
-
+import projectImg from "../../public/images/projects/project_thumb.svg";
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
@@ -132,23 +132,35 @@ const projects = () => {
                 type={"Web Application"}
                 title={"Semester Result Processing System for University Department"}
                 link="#"
-                github={""}
-                img={""}
-                summary= "JSON Server."
+                github={"https://github.com/rhidwan/result-processing-system"}
+                img={projectImg}
+                summary="It automates the tiring task involved in the preparation of results for
+                semester final exams in the department."
               />
             </div>
             
            
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type={"PROJECT"}
+                type={"Web Application"}
                 title={"Automated Admission Registration system for Educational Institute"}
                 link="#"
-                github={"#"}
-                img={''}
-                summary="Find your Favourite Cocktails Here. Simple Cocktail Searching App made with React,Vite , Chakra UI , React-Redux."
+                github={"https://github.com/rhidwan/cubac-backend"}
+                img={projectImg}
+                summary="It automates student application, fee payment, generation of application form, admit card and seat plan of the educational institute."
               />
             </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type={"Web Application"}
+                title={"Product verification system for VerifyInnocent"}
+                link="#"
+                github={"https://github.com/rhidwan/verify-innocent"}
+                img={projectImg}
+                summary="Users can check if the product is authentic or not via unique QR code. It shows authentic in first try, in 2nd-4th try it shows already authenticated and for further try it shows product is not authentic"
+              />
+            </div>
+                        
           </div>
         </Layout>
       </main>

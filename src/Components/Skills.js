@@ -37,13 +37,12 @@ const Skills = () => {
         <Skill name="Selenium" x="30vw" y="0vw"/>
         <Skill name="Django" x="0vw" y="10vw"/>
         <Skill name="MySQL" x="0vw" y="20vw"/>
-        <Skill name="Data Scraping" x="-30vw" y="0vw"/>
+        <Skill name="Python" x="-30vw" y="0vw"/>
         <Skill name="DRF" x="0vw" y="-10vw"/>
-        <Skill name="GIT" x="25vw" y="20vw"/>
-        <Skill name="Python" x="-25vw" y="20vw"/>
+        <Skill name="GIT" x="-25vw" y="10vw"/>
         <Skill name="Nodejs" x="0vw" y="-20vw"/>
         <Skill name="API Integration" x="25vw" y="-10vw"/>
-       s
+       
       </div>
     </>
   );
