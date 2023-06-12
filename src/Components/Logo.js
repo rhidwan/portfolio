@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../../public/SSS-LOGO.png"
+import logo from "../../public/logo.svg"
 import Image from "next/image";
 
 const MotionLink = motion(Link);
@@ -26,7 +26,7 @@ const Logo = () => {
           transition:{duration:1,repeat:Infinity}
         }}
       >
-        {/* <Image src={logo} alt="" /> */}
+        <Image src={logo} className="object-fill" alt="" />
       </MotionLink>
     </div>
   );
