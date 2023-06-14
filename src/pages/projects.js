@@ -7,6 +7,9 @@ import Link from "next/link";
 import React from "react";
 import Transitions from "../Components/Transitions";
 import projectImg from "../../public/images/projects/project_thumb.svg";
+import srpsImg from "../../public/images/projects/srps.png";
+import cucbaImg from "../../public/images/projects/cucba.png";
+import productAuthImg from "../../public/images/projects/productAuthenticator.png"
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
@@ -133,7 +136,7 @@ const projects = () => {
                 title={"Semester Result Processing System for University Department"}
                 link="#"
                 github={"https://github.com/rhidwan/result-processing-system"}
-                img={projectImg}
+                img={srpsImg}
                 summary="It automates the tiring task involved in the preparation of results for
                 semester final exams in the department."
               />
@@ -146,7 +149,7 @@ const projects = () => {
                 title={"Automated Admission Registration system for Educational Institute"}
                 link="#"
                 github={"https://github.com/rhidwan/cubac-backend"}
-                img={projectImg}
+                img={cucbaImg}
                 summary="It automates student application, fee payment, generation of application form, admit card and seat plan of the educational institute."
               />
             </div>
@@ -156,7 +159,7 @@ const projects = () => {
                 title={"Product verification system for VerifyInnocent"}
                 link="#"
                 github={"https://github.com/rhidwan/verify-innocent"}
-                img={projectImg}
+                img={productAuthImg}
                 summary="Users can check if the product is authentic or not via unique QR code. It shows authentic in first try, in 2nd-4th try it shows already authenticated and for further try it shows product is not authentic"
               />
             </div>
