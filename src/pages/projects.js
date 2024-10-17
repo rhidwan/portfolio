@@ -6,12 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Transitions from "../Components/Transitions";
-import projectImg from "../../public/images/projects/project_thumb.svg";
 import srpsImg from "../../public/images/projects/srps.png";
 import cucbaImg from "../../public/images/projects/cucba.png";
 import productAuthImg from "../../public/images/projects/productAuthenticator.png"
 
-const FeatureProject = ({ type, title, summary, img, github, link }) => {
+const FeatureProject = ({ type, title, summary, img, github, link, demo }) => {
   return (
     <article className="dark:bg-dark dark:border-light w-full flex relative items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-primary xs:-right-3 sm:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]" />
@@ -24,6 +23,8 @@ const FeatureProject = ({ type, title, summary, img, github, link }) => {
         <Image
           src={img}
           alt={title}
+          width={1200}
+          height={768}
           className="w-full h-auto"
           priority
           sizes="(max-width: 768px) 100vw,
@@ -65,7 +66,7 @@ const FeatureProject = ({ type, title, summary, img, github, link }) => {
   );
 };
 
-const Project = ({ type, title, summary, img, github, link }) => {
+const Project = ({ type, title, summary, img, github, link, demo }) => {
   return (
     <>
       <article className=" dark:bg-dark dark:border-light w-full flex relative shadow-2xl items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 xs:p-4">
@@ -76,7 +77,7 @@ const Project = ({ type, title, summary, img, github, link }) => {
           target="_blank"
           className=" w-full cursor-pointer overflow-hidden rounded-lg"
         >
-          <Image src={img} alt={title} className="w-full h-auto" />
+          <Image src={img} alt={title} width={800} height={400} className="w-full h-96" />
         </Link>
 
         <div className="w-full flex flex-col items-start justify-between mt-4">
@@ -133,6 +134,17 @@ const projects = () => {
             <div className="col-span-12">
               <FeatureProject
                 type={"Web Application"}
+                title={"Swojon.com | Multivendor Ecommerce Platform"}
+                link="https://www.swojon.com/"
+                github={"#"}
+                img={"https://res.cloudinary.com/iqbalrhidwan/image/upload/v1729179902/swojon_screenshot_1_vv1mr3.png"}
+                summary="Swojon is a marketplace where people can buy and sell their own personal goods. "
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+            
+            <Project
+                type={"Web Application"}
                 title={"Semester Result Processing System for University Department"}
                 link="#"
                 github={"https://github.com/rhidwan/result-processing-system"}
@@ -141,8 +153,6 @@ const projects = () => {
                 semester final exams in the department."
               />
             </div>
-            
-           
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type={"Web Application"}
@@ -155,6 +165,17 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
+                type={"Web API leveraging Stable diffusion"}
+                title={"QrCode Generation Using Stable Diffusion"}
+                link="#"
+                github={"#"}
+                img={"https://res.cloudinary.com/iqbalrhidwan/image/upload/v1729180596/Angel_rkoc4c.png"}
+                summary="Users can check if the product is authentic or not via unique QR code. It shows authentic in first try, in 2nd-4th try it shows already authenticated and for further try it shows product is not authentic"
+              />
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              <Project
                 type={"Web Application"}
                 title={"Product verification system for VerifyInnocent"}
                 link="#"
@@ -163,6 +184,7 @@ const projects = () => {
                 summary="Users can check if the product is authentic or not via unique QR code. It shows authentic in first try, in 2nd-4th try it shows already authenticated and for further try it shows product is not authentic"
               />
             </div>
+                      
                         
           </div>
         </Layout>

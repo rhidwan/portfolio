@@ -11,7 +11,14 @@ module.exports = {
         hostname: 'assets.vercel.com',
         port: '',
         pathname: '/image/upload/**',
-      },
+      }
     ],
+    domains: ["res.cloudinary.com"]
   },
+  experimental: {
+    images: {
+        allowFutureImage: true
+    }
+  },
+
 }
