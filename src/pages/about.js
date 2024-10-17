@@ -2,13 +2,13 @@ import AnimatedText from "../Components/AnimatedText";
 import Education from "../Components/Education";
 import Experience from "../Components/Experience";
 import Layout from "../Components/Layout";
-import Skills from "../Components/Skills";
 import Transitions from "../Components/Transitions";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProfilePic from "../../public/images/profile/myself.png";
+import NewSkills from "@/Components/NewSkills";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -37,6 +37,16 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const About = () => {
+  const [experienceYear, setExperienceYear] = useState(0);
+
+  useEffect(() => {
+    const startDate = new Date('2019-01-01'); // Replace with your start date
+    const currentDate = new Date();
+    
+    const years = currentDate.getFullYear() - startDate.getFullYear();
+    setExperienceYear(years);
+  }, []);
+
   return (
     <>
       <Head>
@@ -47,26 +57,25 @@ const About = () => {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="!pt-16">
           <AnimatedText
-            text={"Purpose Fuels Passion! "}
+            text={"Crafting Code, Creating Comfort & Delivering Trust! "}
             className="mb-16 lg:!text-7xl md:!text-6xl sm:!text-4xl sm:!mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
+            <div className="col-span-3 flex flex-col items-start justify-center xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase tex-dark/75 dark:text-primary">
-                BIOGRAPHY
+                About Me
               </h2>
               <p className="font-medium">
-              Im a Python developer. I write computer programs that automate real-world tasks using Python and save a lot of time, money, & headaches for businesses like yours.
+              Greetings! <br/><br/>
  
-        I also code for web projects using Python (Flask, Django), PHP, and Javascript.
-        
-        My skills also extend to IoT Electronics projects using Arduino and NodeMCU.
-        
-        I’m extremely friendly (yet professional) and will meet all deadlines. I never have any issues with communication in English.
-        
-        Besides freelancing, I am an Electrical Engineering student currently pursuing my BSc. Engg degree.
-        
-
+ I’m a full stack Python and NodeJS developer. I write programs that automate real-world tasks and save a lot of time, money, & headaches for businesses like yours.
+ <br/><br/>
+ I am proficient in Python (Django framework), NodeJS, REST API, GraphQL API, Database Technologies, and Nextjs. I also do data scraping and web automation using Selenium, BeautifulSoup for my clients. I also develop various bots for platform like discord, telegram.
+ <br/><br/>
+ I’m extremely friendly (yet professional) and will meet all deadlines.
+ <br/><br/>
+ I have completed my Bachelor degree in Electrical & Electronic Engineering from the University of Chittagong.
+ <br/><br/>
               </p>
 
              
@@ -86,7 +95,7 @@ const About = () => {
             <div className="col-span-2 flex flex-col justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-5xl sm:text-4xl xs:text-3xl">
-                  <AnimatedNumbers value={4} />+
+                  <AnimatedNumbers value={experienceYear} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-primaryDark xl:items-center md:text-lg sm:text-base xs:text-sm">
                   Years of Experience{" "}
@@ -94,7 +103,16 @@ const About = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-5xl sm:text-4xl xs:text-3xl">
-                  <AnimatedNumbers value={225} />+
+                  <AnimatedNumbers value={150} />+
+                </span>
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-primaryDark xl:items-center md:text-lg sm:text-base xs:text-sm">
+                  happy clients
+                </h2>
+              </div>
+
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-5xl sm:text-4xl xs:text-3xl">
+                  <AnimatedNumbers value={300} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-primaryDark xl:items-center md:text-lg sm:text-base xs:text-sm">
                   Completed Orders
@@ -102,7 +120,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <Skills />
+          <NewSkills />
           <Experience/>
           <Education />
         </Layout>

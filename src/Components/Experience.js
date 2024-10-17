@@ -19,7 +19,7 @@ const Details = ({ type, time, place, info }) => {
       <span className="capitalize font-medium text-dark/75 dark:text-primaryDark/75 xs:text-sm">
         {time}| {place}
       </span>
-      <p className="font-medium w-full md:text-sm">{info}</p>
+      <div className="font-medium w-full md:text-sm">{info}</div>
     </motion.div>
     </li>
   );
@@ -49,7 +49,7 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
           <Details
-            type="Level 2 Seller"
+            type="Top Rated Seller"
             time="May 2019 - Present "
             place= "Fiverr Inc."
             info={(<ul>
